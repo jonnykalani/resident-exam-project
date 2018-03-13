@@ -2,7 +2,8 @@
 
 const config = {
   apiOrigins: {
-    production: 'https://structured-quizzes.herokuapp.com'
+    production: 'https://structured-quizzes.herokuapp.com',
+    development: 'http://localhost:4741/'
   }
 }
 

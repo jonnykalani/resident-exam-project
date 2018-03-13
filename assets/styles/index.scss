@@ -1,2 +1,97 @@
 $icon-font-path: '~bootstrap-sass/assets/fonts/bootstrap/';
 @import '~bootstrap-sass/assets/stylesheets/bootstrap';
+
+.hidden-content-table {
+  display: none;
+  color: white;
+  background-color: white;
+}
+
+.control-buttons {
+  text-align: center;
+}
+
+.content-table {
+  align-items: center;
+}
+
+.pad-5 {
+  padding: 5px;
+}
+
+.main-section {
+  display: none;
+}
+
+.navbar {
+  display: none;
+}
+
+.sign-in {
+  text-align: center;
+}
+
+.sign-up {
+  text-align: center;
+}
+
+.signup-link:hover {
+  cursor: pointer;
+}
+
+.signin-link:hover {
+  cursor: pointer;
+}
+
+.add-crew-btn {
+  text-align: center;
+}
+
+.sign-in-main {
+  float: none;
+  display: block;
+  margin-top: 10%;
+  border: 1px solid black;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.sign-up-main {
+  float: none;
+  display: block;
+  margin-top: 10%;
+  border: 1px solid black;
+  margin-left: auto;
+  margin-right: auto;
+  width: 500px;
+}
+
+.sign-in-form {
+  display: block;
+}
+
+
+.sign-up-form {
+  display: none;
+}
+
+.sign-in-error {
+  background-color: red;
+  display: none;
+}
+
+.sign-up-error {
+  background-color: red;
+  display: none;
+}
+
+.change-password-error {
+  margin-top: 10px;
+  background-color: red;
+  display: none;
+}
+
+.header_row {
+  font-weight: bold;
+  text-decoration: underline;
+}

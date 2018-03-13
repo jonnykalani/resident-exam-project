@@ -2,7 +2,7 @@
 
 const config = {
   apiOrigins: {
-    production: 'https://jonnykalani.herokuapp.com'
+    production: 'https://structured-quizzes.herokuapp.com'
   }
 }
 

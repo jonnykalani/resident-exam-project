@@ -17,6 +17,13 @@ const signInSuccess = function (data) {
   $('#status-message').text('Signed In Successfully')
   $('#status-message').css('background-color', 'green')
   $('#container-sign').hide()
+  $('#change-password').show()
+  $('#sign-out').show()
+//  #board, #change-password, #sign-out, #create-quiz, #get-quizzes, #get-quiz
+  $('#create-quiz').show()
+  $('#get-quizzes').show()
+  $('#get-quiz').show()
+
   console.log(data)
   store.user = data.user
   console.log('Signed in')

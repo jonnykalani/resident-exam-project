@@ -10,34 +10,86 @@
       <!-- Do not add `script` tags-->
       <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
       <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
+      <link rel="stylesheet" type="text/css" href="./assets/styles/index.scss" />
     </head>
     <body class="container-fluid">
-      <form class="sign-in-form" id="signInForm">
-          <div class="col-md-4 sign-in-main row">
-              <div class="sign-up">
-                <h2 class="sign-in">Sign In</h2>
-                  <div class="sign-in-error"><p>There was an error while signing in. Please check credentials and try again</p></div>
+      <header>
+      <h1 class="text-align-center">STRUCTURED</h1>
 
-                  <div class="row">
-                    <label for="Emaill Address" class="col-sm-3 control-label pad-5">Email Address</label>
-                    <div class="col-sm-9 pad-5">
-                      <input type="email" name="credentials[email]" class="form-control" id="signInEmail" placeholder="Email Address" required>
-                    </div>
-                  </div>
+      <form id="sign-out" class="sign-out text-align-center">
+        <fieldset>
+          <input type="submit" name="submit" value="Sign out">
+        </fieldset>
+      </form>
 
-                  <div class="row">
-                    <label for="inputPassword3" class="col-sm-3 control-label pad-5">Password</label>
-                    <div class="col-sm-9 pad-5">
-                      <input type="password" name="credentials[password]" class="form-control" id="inputPassword" placeholder="Password" required>
-                    </div>
-                </div>
+    </header>
 
-                <div class="sign-in pad-5">
-                  <button type="submit" class="btn btn-default btn-sign-in pad-5" id="signInButton">Sign In</button>
-                  <h6>Not a member? <a class="signup-link" id="signUpLink">Sign-up!</a></h6>
-                </div>
-              </div>
-          </div>
+    <h3 id="status-message" class="status-message text-align-center">Please sign up. Have an account? Sign in.</h3>
+    <hr>
+
+    <section class="content-container">
+      <form id="create-quiz" class="create-quiz text-align-center">
+        <fieldset>
+          <input type="submit" name="submit" value="Create new quiz">
+        </fieldset>
+      </form>
+
+      <div class="container-sign">
+        <form id="sign-up" class="text-align-center">
+          <fieldset>
+            <legend>Sign up</legend>
+            <input type="text" name="credentials[email]" placeholder="email">
+            <!-- name matters. Our object is made to look like what we see in sign-uo.sh  -->
+            <input type="password" name="credentials[password]" placeholder="password">
+            <input type="password" name="credentials[password_confirmation]" placeholder="password_confirmation">
+            <input type="submit" name="submit" value="Sign up">
+          </fieldset>
         </form>
+
+        <form id="sign-in" class="text-align-center">
+          <fieldset>
+            <legend>Sign in</legend>
+            <input type="text" name="credentials[email]" placeholder="email">
+            <!-- [email] is the key of credentials object. name matters. Our object is made to look like what we see in sign-uo.sh  -->
+            <input type="password" name="credentials[password]" placeholder="password">
+            <input type="submit" name="submit" value="Sign in">
+          </fieldset>
+        </form>
+      </div>
+
+      <form id="change-password" class="change-password text-align-center">
+        <fieldset>
+          <legend>Change password</legend>
+          <input type="password" name="passwords[old]" placeholder="old password">
+          <!-- [email] is the key of credentials object. name matters. Our object is made to look like what we see in sign-uo.sh  -->
+          <input type="password" name="passwords[new]" placeholder="new password">
+          <!-- what will our object look like at this point? see notes (1)-->
+          <input type="submit" name="submit" value="Change password">
+        </fieldset>
+      </form>
+
+      <aside class="view-score">
+        <div class="view-quizzes">
+          <form id="get-quizzes" class="get-quizzes text-align-center">
+            <fieldset>
+              <input type="submit" name="submit" value="View past quizzes">
+            </fieldset>
+          </form>
+
+          <div id="show-quizzes-container" class="show-quizzes-container"></div>
+
+
+          <form id="get-quiz" class="get-quiz text-align-center">
+            <fieldset>
+              <input type="submit" name="submit" value="View a quiz">
+              <input type="text" name="quiz[id]" id="quiz-id" placeholder="Enter Quiz ID">
+            </fieldset>
+          </form>
+        </div>
+      </aside>
+
+      <div id="show-quiz-container" class="show-quiz-container text-align-center"></div>
+
+    </section>
     </body>
 </html>

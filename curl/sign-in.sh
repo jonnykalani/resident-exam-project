@@ -1,14 +1,13 @@
 #!/bin/bash
 
-curl "https://structured-quizzes.herokuapp.com/sign-up/" \
+curl "https://structured-quizzes.herokuapp.com/sign-in/" \
   --include \
   --request POST \
   --header "Content-Type: application/json" \
   --data '{
     "credentials": {
       "email": "'"${EMAIL}"'",
-      "password": "'"${PASSWORD}"'",
-      "password_confirmation": "'"${PASSWORD_CONFIRMATION}"'"
+      "password": "'"${PASSWORD}"'"
     }
   }'
 
